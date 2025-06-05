@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Environment Login & Register</title>
+  <link rel="stylesheet" href="Style/styleLogin.css">
+</head>
+<body>
+  <main class="auth-container" role="main" aria-label="Authentication forms">
+    <h1>Bumi Masa Depan</h1>
+    <p id="formSubtitle">Secure access to your eco account</p>
+
+    <nav class="tab-buttons" role="tablist">
+      <button type="button" id="loginTab" class="active" aria-selected="true" aria-controls="loginForm" role="tab">Login</button>
+      <button type="button" id="registerTab" aria-selected="false" aria-controls="registerForm" role="tab">Register</button>
+    </nav>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="active" novalidate aria-live="polite" aria-labelledby="loginTab" role="tabpanel">
+      <div>
+        <label for="loginUsername">Username or Email</label>
+        <input type="text" id="loginUsername" name="loginUsername" placeholder="Enter username or email" required autocomplete="username" />
+        <div class="error-msg" id="loginUsernameError"></div>
+      </div>
+      <div>
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" required autocomplete="current-password" />
+        <div class="error-msg" id="loginPasswordError"></div>
+      </div>
+      <button type="submit" aria-label="Login to your account">Login</button>
+      <div class="error-msg" id="loginErrorMsg"></div>
+
+      <!-- Loading Spinner (Earth-themed animation) -->
+      <div id="loadingSpinner" class="loading-spinner"></div>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" novalidate aria-live="polite" aria-labelledby="registerTab" role="tabpanel">
+      <!-- Form fields for registration (same as login form) -->
+      <div>
+        <label for="registerName">Full Name</label>
+        <input type="text" id="registerName" name="registerName" placeholder="Enter your full name" required autocomplete="name" />
+        <div class="error-msg" id="registerNameError"></div>
+      </div>
+      <div>
+        <label for="registerUsername">Username</label>
+        <input type="text" id="registerUsername" name="registerUsername" placeholder="Choose a username" required autocomplete="username" />
+        <div class="error-msg" id="registerUsernameError"></div>
+      </div>
+      <div>
+        <label for="registerEmail">Email</label>
+        <input type="email" id="registerEmail" name="registerEmail" placeholder="Enter your email" required autocomplete="email" />
+        <div class="error-msg" id="registerEmailError"></div>
+      </div>
+      <div>
+        <label for="registerPassword">Password</label>
+        <input type="password" id="registerPassword" name="registerPassword" placeholder="Create a password" required autocomplete="new-password" />
+        <div class="error-msg" id="registerPasswordError"></div>
+      </div>
+      <div>
+        <label for="registerConfirmPassword">Confirm Password</label>
+        <input type="password" id="registerConfirmPassword" name="registerConfirmPassword" placeholder="Confirm your password" required autocomplete="new-password" />
+        <div class="error-msg" id="registerConfirmPasswordError"></div>
+      </div>
+      <button type="submit" aria-label="Register new account">Register</button>
+      <div class="success-msg" id="registerSuccessMsg"></div>
+
+      <!-- Loading Spinner (Earth-themed animation) -->
+      <div id="loadingSpinner" class="loading-spinner"></div>
+    </form>
+    <p class="footer-text">© 2024 Green Environment Initiative</p>
+  </main>
+  <script src="Script/scriptLogin.js"></script>
+  <script src="Script/cute-eye-anim.js"></script>
+  <script src="Script/earth-anim.js"></script>
+</body>
+</html>

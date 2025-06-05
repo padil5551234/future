@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Bumi Masa Depan</title>
+    <link rel="stylesheet" href="Style/stylekonservasi.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      article {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+<img src="Image\Background.jpg" style="filter: blur(5px);" alt="Alam ber air">
+<main>
+  <nav class="main-menu">
+    <div class="about-logo" style="display: flex; justify-content: center;">
+      <img src="Image\Our Logo.png" width="100px">
+    </div>
+    <ul>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="beranda.html">
+          <img class="nav-icon" src="Image\planet-earth.png" alt="home icon">
+          <span class="nav-text">Beranda</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="daurUlang.html">
+          <img src="Image/recycle-symbol-of-three-arrows.png" alt="recycle icon" class="nav-icon">
+          <span class="nav-text">Daur Ulang</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <b></b>
+        <b></b>
+        <a href="konservasi.html">
+          <img src="Image/conservation2.png" alt="conservation icon" class="nav-icon">
+          <span class="nav-text">Konservasi</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="tentangKami.html">
+          <img src="Image/about.png" alt="about us icon" class="nav-icon">
+          <span class="nav-text">Tentang Kami</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <section class="content flex flex-col lg:flex-row min-h-screen">
+      
+    
+      <!-- Konten Utama -->
+      <div class="w-full lg:w-3/4 px-6 py-6 bg-[#0f130a]">
+        <!-- Header -->
+        <header class="mb-8">
+          <div class="relative h-64 rounded-lg overflow-hidden shadow-md">
+            <img src="https://storage.googleapis.com/a1aa/image/b74ccdac-e4ee-4da9-68b1-ac70a893fb4d.jpg" alt="Konservasi" class="w-full h-full object-cover brightness-[0.5]">
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#12160D] to-transparent">
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Konservasi Alam</h1>
+            </div>
+          </div>
+        </header>
+    
+        <!-- Form Filter -->
+        <form class="flex flex-col sm:flex-row gap-4 bg-[#1B2412]/70 rounded-lg p-4 mb-10">
+          <div class="flex items-center gap-2 flex-1">
+            <i class="fa-solid fa-location-dot text-[#B9B9B9]"></i>
+            <select class="bg-transparent text-[#B9B9B9] text-sm outline-none w-full cursor-pointer">
+              <option>Lokasi</option>
+              <option>opsi 1</option>
+              <option>opsi 2</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2 flex-1">
+            <i class="fa-solid fa-calendar-days text-[#B9B9B9]"></i>
+            <select class="bg-transparent text-[#B9B9B9] text-sm outline-none w-full cursor-pointer">
+              <option>Tanggal</option>
+              <option>10 Maret 2024</option>
+              <option>15 Mei 2024</option>
+            </select>
+          </div>
+          <div class="flex items-center gap-2 flex-1">
+            <i class="fa-solid fa-people-group text-[#B9B9B9]"></i>
+            <select class="bg-transparent text-[#B9B9B9] text-sm outline-none w-full cursor-pointer">
+              <option>Jumlah Peserta</option>
+              <option>2 opsi</option>
+              <option>3 opsi</option>
+            </select>
+          </div>
+          <button type="submit" class="bg-[#7B8B2E] text-white text-sm font-semibold rounded-md px-4 py-2 hover:bg-[#8ca02f] transition-colors">
+            Cari Kegiatan
+          </button>
+        </form>
+    
+        <!-- Kegiatan Cards -->
+        <section>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <article class="bg-[#1B2412]/70 border border-[#7B8B2E] rounded-lg overflow-hidden shadow-md">
+              <img src="Image/Reboisasi.jpg" alt="Reboisasi" class="w-full h-48 object-cover">
+              <div class="p-4 text-[#B9B9B9] text-sm">
+                <h3 class="text-white font-semibold mb-2">Cegah Bencana, Reboisasi di Probolinggo</h3>
+                <p>KPH Probolinggo merehabilitasi 1.677,7 hektare hutan lindung dengan menanam pohon buah-buahan untuk mencegah banjir dan longsor.</p>
+              </div>
+              <div class="absolute top-2 right-2 bg-[#7B8B2E] text-white text-xs font-semibold rounded-full px-2 py-0.5">4.6</div>
+            </article>
+            <!-- Card 2 -->
+            <article class="bg-[#1B2412]/70 border border-[#7B8B2E] rounded-lg overflow-hidden shadow-md">
+              <img src="Image/Pandawara Group.jpg" alt="Pantai Cibutun" class="w-full h-48 object-cover">
+              <div class="p-4 text-[#B9B9B9] text-sm">
+                <h3 class="text-white font-semibold mb-2">Cibutun Bebas Sampah</h3>
+                <p>Aksi Pandawara dan warga membersihkan 100 ton sampah dari pantai terkotor ke-4 di Indonesia, menjadikan Cibutun kembali bersih.</p>
+              </div>
+              <div class="absolute top-2 right-2 bg-[#7B8B2E] text-white text-xs font-semibold rounded-full px-2 py-0.5">4.7</div>
+            </article>
+            <!-- Card 3 -->
+            <article class="bg-[#1B2412]/70 border border-[#7B8B2E] rounded-lg overflow-hidden shadow-md">
+              <img src="Image/Sidrap Turbin kincir angin.jpg" alt="PLTB Sidrap" class="w-full h-48 object-cover">
+              <div class="p-4 text-[#B9B9B9] text-sm">
+                <h3 class="text-white font-semibold mb-2">PLTB Sidrap, Sulsel</h3>
+                <p>Dengan 30 turbin dan kapasitas 75 MW, PLTB Sidrap menjadi simbol energi hijau yang menyuplai listrik di Sulawesi.</p>
+              </div>
+              <div class="absolute top-2 right-2 bg-[#7B8B2E] text-white text-xs font-semibold rounded-full px-2 py-0.5">5.0</div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    
+
+    <!-- right content -->
+    <div class="right-content">
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

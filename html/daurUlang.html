@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Bumi Masa Depan</title>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/> -->
+    <link rel="stylesheet" href="Style/style.css">
+    <style>
+        :root {
+  --primary: #00C2FF;
+  --green-accent: #34d399; /* Tailwind's emerald-400 */
+  --bg-dark: #1E2A38;
+  --bg-light: #2B3B4D;
+  --text-light: #ffffff;
+  --text-subtle: #b0bfcf;
+}
+
+.recycle-content {
+  background-color: var(--bg-dark);
+  padding: 3rem 2rem;
+  color: var(--text-light);
+  border-radius: 1.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 10px 30px rgba(0, 194, 255, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.recycle-hero {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.recycle-hero h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--green-accent);
+}
+
+.recycle-hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--text-subtle);
+}
+
+.recycle-hero h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.recycle-hero ul,
+.recycle-hero ol {
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.recycle-hero li {
+  margin-bottom: 0.4rem;
+}
+
+.recycle-box {
+  flex: 1 1 250px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: rgba(52, 211, 153, 0.1); /* hijau lembut */
+  border-left: 4px solid var(--green-accent);
+}
+
+.recycle-box.yellow {
+  background-color: rgba(255, 237, 170, 0.1); /* kuning lembut */
+  border-left-color: #facc15; /* kuning */
+}
+
+.recycle-facts {
+  margin-top: 2rem;
+}
+
+.recycle-facts h2 {
+  color: var(--primary);
+}
+
+.recycle-facts p {
+  margin-top: 0.5rem;
+  color: var(--text-subtle);
+}
+
+.recycle-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.recycle-button button {
+  background-color: var(--green-accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recycle-button button:hover {
+  background-color: #059669; /* darken green */
+}
+
+/* Animasi fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    </style>
+</head>
+<body>
+<img src="Image\Background.jpg" style="filter: blur(5px);" alt="Alam ber air">
+<main>
+  <nav class="main-menu">
+    <div class="about-logo" style="display: flex; justify-content: center;">
+      <img src="Image\Our Logo.png" width="100px">
+    </div>
+    <ul>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="beranda.html">
+          <img class="nav-icon" src="Image\planet-earth.png" alt="home icon">
+          <span class="nav-text">Beranda</span>
+        </a>
+      </li>
+      <li class="nav-item active">
+        <b></b>
+        <b></b>
+        <a href="#">
+          <img src="Image/recycle-symbol-of-three-arrows.png" alt="recycle icon" class="nav-icon">
+          <span class="nav-text">Daur Ulang</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="Konservasi.html">
+          <img src="Image/conservation2.png" alt="conservation icon" class="nav-icon">
+          <span class="nav-text">Konservasi</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <b></b>
+        <b></b>
+        <a href="tentangkami.html">
+          <img src="Image/about.png" alt="about us icon" class="nav-icon">
+          <span class="nav-text">Tentang Kami</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="content">
+    <aside class="recycle-content">
+      <div class="recycle-hero" style="padding: 2rem; background: rgba(255, 255, 255, 0.8); border-radius: 1rem;">
+        <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">Kenali dan Dukung Daur Ulang!</h1>
+        <p style="font-size: 1rem; line-height: 1.5; margin-bottom: 1.5rem;">
+          Daur ulang adalah proses mengubah limbah menjadi produk baru untuk mencegah pemborosan bahan yang berpotensi berguna, mengurangi konsumsi bahan baku segar, dan mengurangi penggunaan energi serta polusi.
+        </p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+          <div style="flex: 1 1 250px; background: #d0f0c0; padding: 1rem; border-radius: 0.5rem;">
+            <h2 style="font-size: 1.2rem; font-weight: bold;">♻️ Jenis Sampah yang Bisa Didaur Ulang</h2>
+            <ul style="margin-top: 0.5rem; padding-left: 1rem;">
+              <li>✔️ Kertas dan Kardus</li>
+              <li>✔️ Plastik tertentu (PET, HDPE)</li>
+              <li>✔️ Logam (aluminium, besi)</li>
+              <li>✔️ Kaca</li>
+              <li>✔️ Elektronik bekas</li>
+            </ul>
+          </div>
+  
+          <div style="flex: 1 1 250px; background: #ffe7a3; padding: 1rem; border-radius: 0.5rem;">
+            <h2 style="font-size: 1.2rem; font-weight: bold;">🛠️ Langkah Mudah Daur Ulang di Rumah</h2>
+            <ol style="margin-top: 0.5rem; padding-left: 1rem;">
+              <li>1. Pisahkan sampah organik dan anorganik</li>
+              <li>2. Cuci kemasan sebelum didaur ulang</li>
+              <li>3. Gunakan ulang botol dan kantong</li>
+              <li>4. Kirim barang ke bank sampah</li>
+            </ol>
+          </div>
+        </div>
+  
+        <div style="margin-top: 2rem;">
+          <h2 style="font-size: 1.2rem; font-weight: bold;">📢 Tahukah Kamu?</h2>
+          <p style="margin-top: 0.5rem;">
+            Sekitar <strong>60%</strong> sampah rumah tangga bisa didaur ulang! Namun sayangnya, sebagian besar masih berakhir di tempat pembuangan akhir (TPA). Yuk, jadi bagian dari perubahan!
+          </p>
+        </div>
+  
+        <div style="margin-top: 2rem; text-align: center;">
+          <button onclick="alert('Terima kasih telah peduli!')" style="background-color: #28a745; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; font-weight: bold; cursor: pointer;">
+            Saya Siap Mendaur Ulang!
+          </button>
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+<script src="https://cdn.tailwindcss.com">
+</script>
+</body>
+</html>
