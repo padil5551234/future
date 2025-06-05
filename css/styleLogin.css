@@ -1,0 +1,431 @@
+:root {
+  --green-light: #D4ECD1;
+  --green-medium: #6AA84F;
+  --green-dark: #38761D;
+  --bg-gradient-start: #CAEAC0;
+  --bg-gradient-end: #80B918;
+  --input-bg: #EDF7E3;
+  --input-border: #A1CDA8;
+  --button-bg: var(--green-medium);
+  --button-hover-bg: var(--green-dark);
+  --text-color: #2B3A13;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+  color: var(--text-color);
+}
+
+.auth-container {
+  background: #FFFFFFDD;
+  padding: 2.4rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(50, 80, 20, 0.2);
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+  text-align: center;
+  animation: fadeInUp 0.7s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--green-dark);
+  margin-bottom: 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tab-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-buttons button.active {
+  border-color: var(--green-medium);
+  color: var(--green-medium);
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  gap: 1.4rem;
+  text-align: left;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+form.active {
+  display: flex;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  background-color: var(--input-bg);
+  color: var(--green-dark);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  outline-offset: 2px;
+  width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--green-medium);
+  background-color: #E6F1C4;
+  outline: none;
+}
+
+button[type="submit"] {
+  padding: 0.9rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--button-bg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(56, 118, 29, 0.4);
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--button-hover-bg);
+  outline: none;
+}
+
+.footer-text {
+  margin-top: 1.8rem;
+  font-size: 0.9rem;
+  color: var(--green-dark);
+  text-align: center;
+}
+
+.error-msg {
+  color: #cc3333;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+.success-msg {
+  color: #2d7a2d;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi mata imut terbang dan tidak menutupi login */
+#cute-eye-anim {
+  position: fixed;
+  top: 8vh;
+  left: 10vw;
+  z-index: 1000;
+  width: 60px;
+  height: 38px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+  transition: top 0.7s cubic-bezier(.4,2,.6,1), left 0.7s cubic-bezier(.4,2,.6,1), transform 0.3s;
+  animation: fly-bounce 4s infinite alternate ease-in-out;
+}
+@keyframes fly-bounce {
+  0% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-10px) scale(1.05); }
+  40% { transform: translateY(8px) scale(0.98); }
+  60% { transform: translateY(-6px) scale(1.03); }
+  80% { transform: translateY(4px) scale(1); }
+  100% { transform: translateY(0) scale(1); }
+}
+.cute-eye {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  border: 2.5px solid #38761D;
+  border-radius: 50%;
+  margin: 0 2px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(56,118,29,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cute-eye-ball {
+  width: 10px;
+  height: 10px;
+  background: #38761D;
+  border-radius: 50%;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  transition: left 0.18s, top 0.18s;
+}
+.cute-eye-blush {
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  background: #f7b6b6;
+  border-radius: 50%;
+  bottom: 2px;
+  left: 4px;
+  opacity: 0.7;
+}
+.cute-eye.right .cute-eye-blush {
+  left: auto;
+  right: 4px;
+}
+.cute-eye-sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  top: 4px;
+  left: 15px;
+  opacity: 0.8;
+  box-shadow: 0 0 6px 2px #fff8;
+}
+#cute-eye-anim .cute-eye {
+  box-shadow: 0 0 0 3px #d4ecd1, 0 2px 8px rgba(56,118,29,0.10);
+}
+
+/* Animasi bumi imut terbang mengikuti kursor, tidak menutupi login */
+#earth-anim {
+  position: fixed;
+  top: 8vh;
+  left: 10vw;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  transition: top 0.7s cubic-bezier(.4,2,.6,1), left 0.7s cubic-bezier(.4,2,.6,1), transform 0.3s;
+  animation: earth-bounce 4s infinite alternate ease-in-out;
+}
+@keyframes earth-bounce {
+  0% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-10px) scale(1.05); }
+  40% { transform: translateY(8px) scale(0.98); }
+  60% { transform: translateY(-6px) scale(1.03); }
+  80% { transform: translateY(4px) scale(1); }
+  100% { transform: translateY(0) scale(1); }
+}
+.earth-emoji {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #7ed6df 60%, #22a6b3 100%);
+  box-shadow: 0 0 0 4px #d4ecd1, 0 2px 8px rgba(56,118,29,0.10);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.earth-land {
+  position: absolute;
+  border-radius: 50%;
+  background: #6AA84F;
+  opacity: 0.85;
+}
+.earth-land.land1 {
+  width: 28px; height: 18px; left: 10px; top: 18px; transform: rotate(-18deg);
+}
+.earth-land.land2 {
+  width: 18px; height: 10px; left: 30px; top: 34px; transform: rotate(12deg);
+}
+.earth-land.land3 {
+  width: 14px; height: 8px; left: 18px; top: 40px; transform: rotate(-8deg);
+}
+.earth-face {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.earth-eye {
+  width: 6px;
+  height: 6px;
+  background: #38761D;
+  border-radius: 50%;
+  margin: 0 2px;
+  position: relative;
+}
+.earth-blush {
+  width: 7px;
+  height: 3px;
+  background: #f7b6b6;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3px;
+  left: -2px;
+  opacity: 0.7;
+}
+.earth-eye.right .earth-blush {
+  left: auto;
+  right: -2px;
+}
+.earth-smile {
+  width: 14px;
+  height: 7px;
+  border-bottom: 2px solid #38761D;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 520px) {
+  #cute-eye-anim {
+    top: 2vh;
+    left: 8vw;
+    width: 44px;
+    height: 28px;
+  }
+  .cute-eye {
+    width: 18px;
+    height: 18px;
+  }
+  .cute-eye-ball {
+    width: 6px;
+    height: 6px;
+    left: 6px;
+    top: 6px;
+  }
+  .cute-eye-blush {
+    width: 5px;
+    height: 2px;
+    left: 2px;
+  }
+  .cute-eye-sparkle {
+    width: 2px;
+    height: 2px;
+    left: 8px;
+    top: 2px;
+  }
+  #earth-anim {
+    top: 2vh;
+    left: 8vw;
+    width: 38px;
+    height: 38px;
+  }
+  .earth-emoji {
+    width: 38px;
+    height: 38px;
+  }
+  .earth-face {
+    width: 20px;
+    height: 10px;
+  }
+  .earth-eye {
+    width: 4px;
+    height: 4px;
+  }
+  .earth-blush {
+    width: 4px;
+    height: 1.5px;
+    left: -1px;
+  }
+  .earth-smile {
+    width: 8px;
+    height: 4px;
+    border-bottom-width: 1.2px;
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-container {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+
+  form {
+    max-width: 100vw;
+    padding: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .auth-container {
+    padding: 1.5rem 1rem;
+  }
+
+  form {
+    gap: 1.2rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+}
